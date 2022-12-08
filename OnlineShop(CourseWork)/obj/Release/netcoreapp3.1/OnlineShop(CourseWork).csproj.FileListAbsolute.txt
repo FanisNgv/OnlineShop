@@ -29,3 +29,4 @@ D:\Course 3\Базы данных\Курсач\OnlineShop(CourseWork)\OnlineShop
 D:\Course 3\Базы данных\Курсач\OnlineShop(CourseWork)\OnlineShop(CourseWork)\obj\Release\netcoreapp3.1\OnlineShop(CourseWork).dll
 D:\Course 3\Базы данных\Курсач\OnlineShop(CourseWork)\OnlineShop(CourseWork)\obj\Release\netcoreapp3.1\OnlineShop(CourseWork).pdb
 D:\Course 3\Базы данных\Курсач\OnlineShop(CourseWork)\OnlineShop(CourseWork)\obj\Release\netcoreapp3.1\OnlineShop(CourseWork).genruntimeconfig.cache
+D:\Course 3\Базы данных\Курсач\OnlineShop(CourseWork)\OnlineShop(CourseWork)\obj\Release\netcoreapp3.1\OnlineShop(CourseWork).csproj.AssemblyReference.cache

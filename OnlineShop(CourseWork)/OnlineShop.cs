@@ -24,6 +24,12 @@ namespace OnlineShop_CourseWork_
         }
         ShopDataBase dataBase = new ShopDataBase();
         int selectedRow;
+
+        AlterFormForCommodity alterFormForCommodity;
+        AlterFormForConsumer alterFormForConsumer;
+        AlterFormForPurchase alterFormForPurchase;
+        AlterFormForStorage alterFormForStorage;
+        
         public OnlineShop()
         {
             InitializeComponent();
@@ -43,6 +49,10 @@ namespace OnlineShop_CourseWork_
             dataGridView4.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
             dataGridView4.AllowUserToOrderColumns = true;
             dataGridView4.AllowUserToResizeColumns = true;
+            dataGridView5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView5.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            dataGridView5.AllowUserToOrderColumns = true;
+            dataGridView5.AllowUserToResizeColumns = true;
         }
         //CONSUMER
         private void CreateColumnsOfConsumer()
@@ -76,8 +86,13 @@ namespace OnlineShop_CourseWork_
         //CONSUMER ACTIONS
         private void addRecord1_Click(object sender, EventArgs e)
         {
-            AlterFormForConsumer addForm = new AlterFormForConsumer(this);
-            addForm.Show();
+            if (alterFormForConsumer!=null)
+            {
+                alterFormForConsumer.Close();
+                alterFormForConsumer = null;
+            }
+            alterFormForConsumer = new AlterFormForConsumer(this);
+            alterFormForConsumer.Show();
         }
         private void UpdateButton1_Click(object sender, EventArgs e)
         {
@@ -85,18 +100,23 @@ namespace OnlineShop_CourseWork_
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (alterFormForConsumer != null)
+            {
+                alterFormForConsumer.Close();
+                alterFormForConsumer = null;
+            }
             selectedRow = e.RowIndex;
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dataGridView1.Rows[selectedRow];
 
-                AlterFormForConsumer addForm = new AlterFormForConsumer(this);
-                addForm.Show();
+                alterFormForConsumer = new AlterFormForConsumer(this);
+                alterFormForConsumer.Show();
 
-                addForm.textBox4.Text = row.Cells[0].Value.ToString();
-                addForm.textBox1.Text = row.Cells[1].Value.ToString();
-                addForm.textBox2.Text = row.Cells[2].Value.ToString();
-                addForm.textBox3.Text = row.Cells[3].Value.ToString();
+                alterFormForConsumer.textBox4.Text = row.Cells[0].Value.ToString();
+                alterFormForConsumer.textBox1.Text = row.Cells[1].Value.ToString();
+                alterFormForConsumer.textBox2.Text = row.Cells[2].Value.ToString();
+                alterFormForConsumer.textBox3.Text = row.Cells[3].Value.ToString();
 
 
             }
@@ -186,25 +206,34 @@ namespace OnlineShop_CourseWork_
         }
         private void addRecCom_Click(object sender, EventArgs e)
         {
-            AlterFormForCommodity addForm = new AlterFormForCommodity(this);
-            addForm.Show();
+            if (alterFormForCommodity != null)
+            {
+                alterFormForCommodity.Close();
+                alterFormForCommodity = null;
+            }
+            alterFormForCommodity = new AlterFormForCommodity(this);
+            alterFormForCommodity.Show();
         }
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (alterFormForCommodity != null)
+            {
+                alterFormForCommodity.Close();
+                alterFormForCommodity = null;
+            }
             selectedRow = e.RowIndex;
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dataGridView2.Rows[selectedRow];
 
-                AlterFormForCommodity addForm = new AlterFormForCommodity(this);
-                addForm.Show();
-
-                addForm.textBox1.Text = row.Cells[0].Value.ToString();
-                addForm.textBox2.Text = row.Cells[1].Value.ToString();
-                addForm.textBox3.Text = row.Cells[2].Value.ToString();
-                addForm.textBox4.Text = row.Cells[3].Value.ToString();
-                addForm.comboBox1.Text = row.Cells[4].Value.ToString();
-                addForm.textBox6.Text = row.Cells[5].Value.ToString();
+                alterFormForCommodity = new AlterFormForCommodity(this);
+                alterFormForCommodity.Show();
+                alterFormForCommodity.textBox1.Text = row.Cells[0].Value.ToString();
+                alterFormForCommodity.textBox2.Text = row.Cells[1].Value.ToString();
+                alterFormForCommodity.textBox3.Text = row.Cells[2].Value.ToString();
+                alterFormForCommodity.textBox4.Text = row.Cells[3].Value.ToString();
+                alterFormForCommodity.comboBox1.Text = row.Cells[4].Value.ToString();
+                alterFormForCommodity.textBox6.Text = row.Cells[5].Value.ToString();
 
 
             }
@@ -242,8 +271,13 @@ namespace OnlineShop_CourseWork_
         // STORAGE ACTIONS
         private void AddRecord2_Click(object sender, EventArgs e)
         {
-            AlterFormForStorage addForm = new AlterFormForStorage(this);
-            addForm.Show();
+            if (alterFormForStorage != null)
+            {
+                alterFormForStorage.Close();
+                alterFormForStorage = null;
+            }
+            alterFormForStorage = new AlterFormForStorage(this);
+            alterFormForStorage.Show();
         }
         private void UpdateButton3_Click(object sender, EventArgs e)
         {
@@ -251,6 +285,11 @@ namespace OnlineShop_CourseWork_
         }
         private void SearchButton3_Click(object sender, EventArgs e)
         {
+            if (alterFormForStorage != null)
+            {
+                alterFormForStorage.Close();
+                alterFormForStorage = null;
+            }
             if (string.IsNullOrEmpty(textBox3.Text))
             {
                 dataGridView3.Rows.Clear();
@@ -276,12 +315,12 @@ namespace OnlineShop_CourseWork_
             {
                 DataGridViewRow row = dataGridView3.Rows[selectedRow];
 
-                AlterFormForStorage addForm = new AlterFormForStorage(this);
-                addForm.Show();
+                alterFormForStorage = new AlterFormForStorage(this);
+                alterFormForStorage.Show();
 
-                addForm.textBox1.Text = row.Cells[0].Value.ToString();
-                addForm.CodeTextBox.Text = row.Cells[1].Value.ToString();
-                addForm.AddressTextBox.Text = row.Cells[2].Value.ToString();
+                alterFormForStorage.textBox1.Text = row.Cells[0].Value.ToString();
+                alterFormForStorage.CodeTextBox.Text = row.Cells[1].Value.ToString();
+                alterFormForStorage.AddressTextBox.Text = row.Cells[2].Value.ToString();
 
 
             }
@@ -319,19 +358,24 @@ namespace OnlineShop_CourseWork_
         //PURCHASE ACITONS
         private void dataGridView4_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (alterFormForPurchase != null)
+            {
+                alterFormForPurchase.Close();
+                alterFormForPurchase = null;
+            }
             selectedRow = e.RowIndex;
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dataGridView4.Rows[selectedRow];
 
-                AlterFormForPurchase addForm = new AlterFormForPurchase(this);
-                addForm.Show();
+                alterFormForPurchase = new AlterFormForPurchase(this);
+                alterFormForPurchase.Show();
 
-                addForm.comboBox1.Text = row.Cells[0].Value.ToString();
-                addForm.comboBox2.Text = row.Cells[1].Value.ToString();
-                addForm.comboBox3.Text = row.Cells[2].Value.ToString();
-                addForm.textBox1.Text = row.Cells[3].Value.ToString();
-                addForm.textBox2.Text = row.Cells[4].Value.ToString();
+                alterFormForPurchase.comboBox1.Text = row.Cells[0].Value.ToString();
+                alterFormForPurchase.comboBox2.Text = row.Cells[1].Value.ToString();
+                alterFormForPurchase.comboBox3.Text = row.Cells[2].Value.ToString();
+                alterFormForPurchase.dateTimePicker1.Value = Convert.ToDateTime(row.Cells[3].Value);
+                alterFormForPurchase.dateTimePicker2.Value = Convert.ToDateTime(row.Cells[4].Value);
 
 
             }
@@ -363,8 +407,13 @@ namespace OnlineShop_CourseWork_
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            AlterFormForPurchase addForm = new AlterFormForPurchase(this);
-            addForm.Show();
+            if (alterFormForPurchase != null)
+            {
+                alterFormForPurchase.Close();
+                alterFormForPurchase = null;
+            }
+            alterFormForPurchase = new AlterFormForPurchase(this);
+            alterFormForPurchase.Show();
         }
         private void OnlineShop_Load(object sender, EventArgs e)
         {
@@ -375,12 +424,62 @@ namespace OnlineShop_CourseWork_
             CreateColumnsForStorage();
             CreateColumnsForCommodity();
             CreateColumnsForPurchase();
+            CreateColumnsForPurchaseAdd();
 
             RefreshDataGridOfConsumer(dataGridView1);
             RefreshDataGridOfCommodity(dataGridView2);            
             RefreshDataGridOfStorage(dataGridView3);
             RefreshDataGridOfPurchase(dataGridView4);
+            RefreshDataGridOfPurchaseAdd(dataGridView5);
         }
-        
+
+        private void OnlineShop_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (alterFormForCommodity != null)
+            {
+                alterFormForCommodity.Close();
+            }
+            if (alterFormForConsumer != null)
+            {
+                alterFormForConsumer.Close();
+            }
+            if (alterFormForStorage != null)
+            {
+                alterFormForStorage.Close();
+            }
+            if (alterFormForPurchase != null)
+            {
+                alterFormForPurchase.Close();
+            }
+        }
+        //PURCHASE ADDITIONAL INFO
+        private void CreateColumnsForPurchaseAdd()
+        {
+            dataGridView5.Columns.Add("EMAIL", "EMAIL");
+            dataGridView5.Columns.Add("NAME_OF_COM", "NAME_OF_COM");
+            dataGridView5.Columns.Add("DATE_OF_PURCHASE", "DATE_OF_PURCHASE");
+            dataGridView5.Columns.Add("DATE_OF_RECEIPT", "DATE_OF_RECEIPT");
+
+        }
+        private void ReadSingleRowForPurchaseAdd(DataGridView dgv, IDataRecord record)
+        {
+            dgv.Rows.Add(record.GetString(0), record.GetString(1), record.GetDateTime(2), record.GetDateTime(3));
+        }
+        public void RefreshDataGridOfPurchaseAdd(DataGridView dgv)
+        {
+            dgv.Rows.Clear();
+            string queryString = $"SELECT CONSUMER.FULL_NAME, COMMODITY.NAME_OF_COM, PURCHASE.DATE_OF_PURCHASE,PURCHASE.DATE_OF_RECEIPT " +
+                $"FROM(PURCHASE INNER JOIN CONSUMER ON CONSUMER.EMAIL = PURCHASE.EMAIL) INNER JOIN COMMODITY ON PURCHASE.CODE_OF_COM = " +
+                $"COMMODITY.CODE_OF_COM";
+
+            SqlCommand command = new SqlCommand(queryString, dataBase.getConnection());
+            dataBase.openConnection();
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                ReadSingleRowForPurchaseAdd(dgv, reader);
+            }
+            reader.Close();
+        }
     }
 }

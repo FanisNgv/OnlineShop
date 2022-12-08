@@ -59,6 +59,7 @@ namespace OnlineShop_CourseWork_
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.dataGridView5 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -72,6 +73,7 @@ namespace OnlineShop_CourseWork_
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -340,6 +342,7 @@ namespace OnlineShop_CourseWork_
             // tabPage4
             // 
             this.tabPage4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage4.BackgroundImage")));
+            this.tabPage4.Controls.Add(this.dataGridView5);
             this.tabPage4.Controls.Add(this.button1);
             this.tabPage4.Controls.Add(this.textBox4);
             this.tabPage4.Controls.Add(this.comboBox4);
@@ -417,9 +420,23 @@ namespace OnlineShop_CourseWork_
             this.dataGridView4.RowHeadersVisible = false;
             this.dataGridView4.RowHeadersWidth = 51;
             this.dataGridView4.RowTemplate.Height = 29;
-            this.dataGridView4.Size = new System.Drawing.Size(1750, 800);
+            this.dataGridView4.Size = new System.Drawing.Size(1750, 400);
             this.dataGridView4.TabIndex = 0;
             this.dataGridView4.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellClick);
+            // 
+            // dataGridView5
+            // 
+            this.dataGridView5.AllowUserToAddRows = false;
+            this.dataGridView5.AllowUserToDeleteRows = false;
+            this.dataGridView5.BackgroundColor = System.Drawing.Color.ForestGreen;
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView5.Location = new System.Drawing.Point(10, 416);
+            this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.RowHeadersVisible = false;
+            this.dataGridView5.RowHeadersWidth = 51;
+            this.dataGridView5.RowTemplate.Height = 29;
+            this.dataGridView5.Size = new System.Drawing.Size(1750, 400);
+            this.dataGridView5.TabIndex = 16;
             // 
             // OnlineShop
             // 
@@ -429,6 +446,7 @@ namespace OnlineShop_CourseWork_
             this.Controls.Add(this.tabControl1);
             this.Name = "OnlineShop";
             this.Text = "OnlineShop";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.OnlineShop_FormClosed);
             this.Load += new System.EventHandler(this.OnlineShop_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabControl1.ResumeLayout(false);
@@ -447,6 +465,7 @@ namespace OnlineShop_CourseWork_
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -483,6 +502,7 @@ namespace OnlineShop_CourseWork_
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dataGridView5;
     }
 }
 

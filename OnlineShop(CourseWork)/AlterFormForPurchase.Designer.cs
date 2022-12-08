@@ -37,13 +37,13 @@ namespace OnlineShop_CourseWork_
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -111,29 +111,15 @@ namespace OnlineShop_CourseWork_
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(704, 26);
+            this.label5.Location = new System.Drawing.Point(749, 26);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(109, 20);
             this.label5.TabIndex = 7;
             this.label5.Text = "Date of receipt";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(555, 61);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 27);
-            this.textBox1.TabIndex = 8;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(704, 61);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(125, 27);
-            this.textBox2.TabIndex = 9;
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(200, 178);
+            this.button1.Location = new System.Drawing.Point(259, 181);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 29);
             this.button1.TabIndex = 10;
@@ -143,7 +129,7 @@ namespace OnlineShop_CourseWork_
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(374, 178);
+            this.button2.Location = new System.Drawing.Point(433, 181);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 29);
             this.button2.TabIndex = 11;
@@ -153,7 +139,7 @@ namespace OnlineShop_CourseWork_
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(538, 178);
+            this.button3.Location = new System.Drawing.Point(597, 181);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(94, 29);
             this.button3.TabIndex = 12;
@@ -175,18 +161,33 @@ namespace OnlineShop_CourseWork_
             this.textBox4.Size = new System.Drawing.Size(151, 27);
             this.textBox4.TabIndex = 14;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker1.Location = new System.Drawing.Point(555, 59);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(182, 27);
+            this.dateTimePicker1.TabIndex = 15;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(749, 62);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(182, 27);
+            this.dateTimePicker2.TabIndex = 16;
+            // 
             // AlterFormForPurchase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(857, 450);
+            this.ClientSize = new System.Drawing.Size(961, 450);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBox3);
@@ -197,6 +198,7 @@ namespace OnlineShop_CourseWork_
             this.Controls.Add(this.label1);
             this.Name = "AlterFormForPurchase";
             this.Text = "AlterFormForPurchase";
+            this.Load += new System.EventHandler(this.AlterFormForPurchase_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,12 +214,12 @@ namespace OnlineShop_CourseWork_
         public System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        public System.Windows.Forms.TextBox textBox1;
-        public System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
+        public System.Windows.Forms.DateTimePicker dateTimePicker1;
+        public System.Windows.Forms.DateTimePicker dateTimePicker2;
     }
 }

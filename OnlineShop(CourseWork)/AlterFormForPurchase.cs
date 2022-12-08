@@ -50,6 +50,14 @@ namespace OnlineShop_CourseWork_
             }
             con.Close();
         }
+        private void AlterFormForPurchase_Load(object sender, EventArgs e)
+        {
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.CustomFormat = "d-MMM-yyyy hh:mm:ss";
+
+            dateTimePicker2.Format = DateTimePickerFormat.Custom;
+            dateTimePicker2.CustomFormat = "d-MMM-yyyy hh:mm:ss";
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -62,8 +70,8 @@ namespace OnlineShop_CourseWork_
 
             var Email = comboBox2.Text;
             var CodeOfComm = comboBox3.Text;
-            var DateOfPurchase = textBox1.Text;
-            var DateOfReceipt = textBox2.Text;
+            var DateOfPurchase = Convert.ToString(dateTimePicker1.Value);
+            var DateOfReceipt = Convert.ToString(dateTimePicker2.Value);
 
             var addQuery = $"INSERT INTO PURCHASE VALUES ( '{Email}','{CodeOfComm}','{DateOfPurchase}','{DateOfReceipt}')";
             var command = new SqlCommand(addQuery, dataBase.getConnection());
@@ -93,7 +101,7 @@ namespace OnlineShop_CourseWork_
                 if (rowState == OnlineShop.RowState.Modified)
                 {
                     var deleteQuery = $"update PURCHASE set EMAIL = '{comboBox2.Text}', CODE_OF_COM = '{comboBox3.Text}'," +
-                        $" DATE_OF_PURCHASE = '{textBox1.Text}', DATE_OF_RECEIPT = '{textBox2.Text}'  where PURCHASE_ID = '{comboBox1.Text}'";
+                        $" DATE_OF_PURCHASE = '{dateTimePicker1.Text}', DATE_OF_RECEIPT = '{dateTimePicker2.Text}'  where PURCHASE_ID = '{comboBox1.Text}'";
                     var command = new SqlCommand(deleteQuery, dataBase.getConnection());
                     command.ExecuteNonQuery();
                 }
@@ -107,8 +115,8 @@ namespace OnlineShop_CourseWork_
             var PurchaseID = comboBox1.Text;
             var Email = comboBox2.Text;
             var CodeOfComm = comboBox3.Text;
-            var DateOfPurchase = textBox1.Text;
-            var DateOfReceipt = textBox2.Text;
+            var DateOfPurchase = Convert.ToString(dateTimePicker1.Value);
+            var DateOfReceipt = Convert.ToString(dateTimePicker2.Value);
 
             if (onShop.dataGridView4.Rows[SelectedRowIndex].Cells[0].Value.ToString() != string.Empty)
             {
@@ -200,5 +208,7 @@ namespace OnlineShop_CourseWork_
             }
             con.Close();
         }
+
+        
     }
 }
