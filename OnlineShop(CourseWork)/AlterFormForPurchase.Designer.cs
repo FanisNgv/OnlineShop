@@ -119,7 +119,7 @@ namespace OnlineShop_CourseWork_
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(259, 181);
+            this.button1.Location = new System.Drawing.Point(245, 210);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 29);
             this.button1.TabIndex = 10;
@@ -129,7 +129,7 @@ namespace OnlineShop_CourseWork_
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(433, 181);
+            this.button2.Location = new System.Drawing.Point(419, 210);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 29);
             this.button2.TabIndex = 11;
@@ -139,7 +139,7 @@ namespace OnlineShop_CourseWork_
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(597, 181);
+            this.button3.Location = new System.Drawing.Point(583, 210);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(94, 29);
             this.button3.TabIndex = 12;
@@ -171,7 +171,7 @@ namespace OnlineShop_CourseWork_
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(749, 62);
+            this.dateTimePicker2.Location = new System.Drawing.Point(749, 59);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(182, 27);
             this.dateTimePicker2.TabIndex = 16;

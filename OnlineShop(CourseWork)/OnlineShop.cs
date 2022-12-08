@@ -455,7 +455,7 @@ namespace OnlineShop_CourseWork_
         //PURCHASE ADDITIONAL INFO
         private void CreateColumnsForPurchaseAdd()
         {
-            dataGridView5.Columns.Add("EMAIL", "EMAIL");
+            dataGridView5.Columns.Add("FULL_NAME", "FULL_NAME");
             dataGridView5.Columns.Add("NAME_OF_COM", "NAME_OF_COM");
             dataGridView5.Columns.Add("DATE_OF_PURCHASE", "DATE_OF_PURCHASE");
             dataGridView5.Columns.Add("DATE_OF_RECEIPT", "DATE_OF_RECEIPT");
@@ -481,5 +481,7 @@ namespace OnlineShop_CourseWork_
             }
             reader.Close();
         }
+
+
     }
 }

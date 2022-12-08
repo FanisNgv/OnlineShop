@@ -81,6 +81,7 @@ namespace OnlineShop_CourseWork_
                 command.ExecuteNonQuery();
                 MessageBox.Show("The record was successfully created!", "Succsess!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 onShop.RefreshDataGridOfPurchase(onShop.dataGridView4);
+                onShop.RefreshDataGridOfPurchaseAdd(onShop.dataGridView5);
             }
             catch (Exception)
             {
@@ -103,10 +104,12 @@ namespace OnlineShop_CourseWork_
                     var deleteQuery = $"update PURCHASE set EMAIL = '{comboBox2.Text}', CODE_OF_COM = '{comboBox3.Text}'," +
                         $" DATE_OF_PURCHASE = '{dateTimePicker1.Text}', DATE_OF_RECEIPT = '{dateTimePicker2.Text}'  where PURCHASE_ID = '{comboBox1.Text}'";
                     var command = new SqlCommand(deleteQuery, dataBase.getConnection());
-                    command.ExecuteNonQuery();
+                    command.ExecuteNonQuery();                    
+
                 }
             }
             dataBase.closeConnection();
+            onShop.RefreshDataGridOfPurchaseAdd(onShop.dataGridView5);
         }
         private void Change()
         {
@@ -158,9 +161,12 @@ namespace OnlineShop_CourseWork_
                 }
                 if (rowState == OnlineShop.RowState.Deleted)
                 {
-                    var deleteQuery = $"delete from PURCHASE where PURCHASE_ID = '{comboBox1.Text}'";
+                    var deleteQuery = $"delete from PURCHASE where EMAIL = '{comboBox2.Text}' and CODE_OF_COM = '{comboBox3.Text}'" +
+                        $" and DATE_OF_PURCHASE = '{Convert.ToString(dateTimePicker1.Value)}'";
                     var command = new SqlCommand(deleteQuery, dataBase.getConnection());
                     command.ExecuteNonQuery();
+                    onShop.RefreshDataGridOfPurchaseAdd(onShop.dataGridView5);
+
                 }
             }
             dataBase.closeConnection();
