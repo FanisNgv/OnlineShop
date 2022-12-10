@@ -163,6 +163,7 @@ namespace OnlineShop_CourseWork_
             this.Controls.Add(this.textBox_password);
             this.Controls.Add(this.openedEye);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Sign_In";
             this.Text = "Sign_In";
             this.Load += new System.EventHandler(this.Sign_In_Load);

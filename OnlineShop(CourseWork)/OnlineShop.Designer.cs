@@ -447,6 +447,7 @@ namespace OnlineShop_CourseWork_
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1894, 959);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "OnlineShop";
             this.Text = "OnlineShop";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.OnlineShop_FormClosed);

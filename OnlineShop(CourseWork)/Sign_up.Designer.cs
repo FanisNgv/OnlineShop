@@ -141,6 +141,7 @@ namespace OnlineShop_CourseWork_
             this.Controls.Add(this.Login_label);
             this.Controls.Add(this.openedEye);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Sign_up";
             this.Text = "Sign_up";
             this.Load += new System.EventHandler(this.Sign_up_Load);
