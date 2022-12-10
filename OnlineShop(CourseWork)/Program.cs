@@ -19,7 +19,6 @@ namespace OnlineShop_CourseWork_
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Sign_In());
-            //Application.Run(new Form1());
             
         }
     }

@@ -53,10 +53,10 @@ namespace OnlineShop_CourseWork_
         private void AlterFormForPurchase_Load(object sender, EventArgs e)
         {
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.CustomFormat = "d-MMM-yyyy hh:mm:ss";
+            dateTimePicker1.CustomFormat = "d-MMM-yyyy HH:mm:ss";
 
             dateTimePicker2.Format = DateTimePickerFormat.Custom;
-            dateTimePicker2.CustomFormat = "d-MMM-yyyy hh:mm:ss";
+            dateTimePicker2.CustomFormat = "d-MMM-yyyy HH:mm:ss";
         }
 
         private void button1_Click(object sender, EventArgs e)

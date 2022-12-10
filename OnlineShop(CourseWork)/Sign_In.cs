@@ -41,7 +41,7 @@ namespace OnlineShop_CourseWork_
 
             if(table.Rows.Count == 1)
             {
-                MessageBox.Show("Вход выполнен!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Login completed!", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 OnlineShop frm = new OnlineShop();
                 this.Hide();
                 this.textBox_login.Text = "";
@@ -51,7 +51,7 @@ namespace OnlineShop_CourseWork_
             }
             else
             {
-                MessageBox.Show("Ошибка входа!", "Аккаунта не существует!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Entry error!", "There is no such an account!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

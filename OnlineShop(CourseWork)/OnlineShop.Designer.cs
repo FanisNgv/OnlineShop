@@ -121,7 +121,7 @@ namespace OnlineShop_CourseWork_
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1912, 1034);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Покупатели";
+            this.tabPage1.Text = "Consumers";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // UpdateButton1
@@ -148,6 +148,7 @@ namespace OnlineShop_CourseWork_
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "EMAIL",
@@ -189,7 +190,7 @@ namespace OnlineShop_CourseWork_
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1912, 1034);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Товары";
+            this.tabPage2.Text = "Commodity";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // SearchButton2
@@ -211,6 +212,7 @@ namespace OnlineShop_CourseWork_
             // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "CODE_OF_COM",
@@ -272,7 +274,7 @@ namespace OnlineShop_CourseWork_
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(1912, 1034);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Склады";
+            this.tabPage3.Text = "Storage";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // SearchButton3
@@ -294,6 +296,7 @@ namespace OnlineShop_CourseWork_
             // 
             // comboBox3
             // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
             "STOR_ID",
@@ -354,7 +357,7 @@ namespace OnlineShop_CourseWork_
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(1912, 1034);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Покупки";
+            this.tabPage4.Text = "Purchase";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // dataGridView5
@@ -390,6 +393,7 @@ namespace OnlineShop_CourseWork_
             // 
             // comboBox4
             // 
+            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
             "PURCHASE_ID",
